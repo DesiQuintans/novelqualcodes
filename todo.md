@@ -1,0 +1,11 @@
+- [ ] Is package name 'novelcodes' okay?
+- [ ] Kam to review his author listing in DESCRIPTION.
+- [ ] Kam to check/write Title and Description of package in DESCRIPTION.
+
+- [ ] Desi to include some example data in inst
+- [ ] Desi to write examples
+    - [ ] import_coding_matrices()
+    - [ ] score_codes()
+    - [ ] plot_novel_cumsum()
+    - [ ] plot_novelty()
+- [ ] Desi to work out how on earth to ship a package vignette

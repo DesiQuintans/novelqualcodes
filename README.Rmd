@@ -1,16 +1,21 @@
-`novelcodes`: Assess and Present Stopping Points in Qualitative
-Interviews Based on Novel Codes
-================
-Kam Wong & Desi Quintans
-2023-06-23
+---
+title: "`novelcodes`: Assess and Present Stopping Points in Qualitative Interviews Based on Novel Codes"
+author: "Kam Wong & Desi Quintans"
+date: "2023-06-23"
+output: 
+    github_document:
+        toc: TRUE
+---
 
-- [Installation](#installation)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 TODO: Introduction
 
 # Installation
 
-``` r
+```{r, eval=FALSE}
 # Install it from CRAN
 # Coming soon!
 
