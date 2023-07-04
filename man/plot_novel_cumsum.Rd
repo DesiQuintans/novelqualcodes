@@ -13,10 +13,6 @@ plot_novel_cumsum(score_df, refinements = integer(0))
 sequence) refinements were made to the interview questions. For example,
 \code{c(10, 15)} means that interview questions were revised twice: First \strong{before}
 the 10th interview, and then again \strong{before} the 15th interview.}
-
-\item{method}{(Character) Method for smoothing that will be passed to \code{\link[ggplot2:geom_smooth]{ggplot2::stat_smooth()}}.}
-
-\item{formula}{(Formula) Formula for smoothing that will be passed to \code{\link[ggplot2:geom_smooth]{ggplot2::stat_smooth()}}.}
 }
 \value{
 A ggplot object.

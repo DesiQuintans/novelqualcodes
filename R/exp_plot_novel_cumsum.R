@@ -11,28 +11,35 @@
 #'    sequence) refinements were made to the interview questions. For example,
 #'    `c(10, 15)` means that interview questions were revised twice: First **before**
 #'    the 10th interview, and then again **before** the 15th interview.
-#' @param method (Character) Method for smoothing that will be passed to [ggplot2::stat_smooth()].
-#' @param formula (Formula) Formula for smoothing that will be passed to [ggplot2::stat_smooth()].
 #'
 #' @return A ggplot object.
 #' @export
 #'
 #' @md
+#' @importFrom ggplot2 .data
 plot_novel_cumsum <- function(score_df, refinements = integer(0)) {
     plot_df <- reshape_for_plots(score_df, refinements)
+    plot_df <- plot_df[plot_df$Code == "Novel", ]
+    plot_df$mark_refinement <- plot_df$Interview %in% refinements
+
 
     annotate_refinements <- list(
         ggplot2::geom_vline(xintercept = refinements,
                             linetype   = "dashed",
-                            colour     = "blue"))
+                            colour     = "gray50"))
 
     ggplot2::ggplot(plot_df,
-                    ggplot2::aes(x = itvw_seq, y = cumsum_novel, group = refinement_group)) +
+                    ggplot2::aes(x = .data$Interview, y = .data$CumSum, group = .data$Refinement)) +
         ggplot2::theme_bw() +
-        ggplot2::theme(panel.grid.minor = ggplot2::element_blank()) +
-        ggplot2::geom_line(alpha = 0.5) +
-        ggplot2::geom_point() +
+        ggplot2::theme(panel.grid.minor   = ggplot2::element_blank(),
+                       panel.grid.major.x = ggplot2::element_blank()) +
+        annotate_refinements +
+        ggplot2::geom_line() +
+        ggplot2::geom_point(ggplot2::aes(fill = .data$mark_refinement),
+                            size = 2, shape = 21, colour = "black") +
+        ggplot2::scale_fill_manual(values = c(`TRUE`  = "black",
+                                              `FALSE` = "grey80")) +
+        ggplot2::theme(legend.position = "none") +
         ggplot2::ylab("Cumulative sum of novel codes") +
-        ggplot2::xlab("Interview sequence number") +
-        annotate_refinements
+        ggplot2::xlab("Interview order")
 }
