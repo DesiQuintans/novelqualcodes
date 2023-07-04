@@ -18,5 +18,5 @@ the 10th interview, and then again \strong{before} the 15th interview.}
 A dataframe.
 }
 \description{
-Reshape score matrix for ggplot2.
+Manually reshapes the data into Long format and adds a refinement group factor.
 }
