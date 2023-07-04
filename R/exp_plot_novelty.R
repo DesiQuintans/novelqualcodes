@@ -9,33 +9,45 @@
 #'    sequence) refinements were made to the interview questions. For example,
 #'    `c(10, 15)` means that interview questions were revised twice: First **before**
 #'    the 10th interview, and then again **before** the 15th interview.
-#' @param method (Character) Method for smoothing that will be passed to [ggplot2::stat_smooth()].
-#' @param formula (Formula) Formula for smoothing that will be passed to [ggplot2::stat_smooth()].
+#' @param percent (Logical) If `FALSE` (default), plot the count of novel and duplicate
+#'    codes in each interview. If `TRUE`, then plot the percentage of novel and duplicate
+#'    codes.
 #'
 #' @return A ggplot object.
 #' @export
 #'
 #' @md
-plot_novelty <- function(score_df, refinements = integer(0), method = "lm", formula = y ~ poly(x, 8)) {
+#' @importFrom ggplot2 .data
+plot_novelty <- function(score_df, refinements = integer(0), percent = FALSE) {
     plot_df <- reshape_for_plots(score_df, refinements)
 
+    if (isTRUE(percent)) {
+        y_label = "Percent"
+        plot_df$measure <- plot_df$Proportion * 100
+    } else {
+        y_label = "Count"
+        plot_df$measure <- plot_df$n
+    }
+
     annotate_refinements <- list(
-        ggplot2::geom_vline(xintercept = refinements,
-                            linetype   = "dashed",
-                            colour     = "blue"))
+        ggplot2::annotate(geom  = "text",
+                          y     = rep(min(plot_df$measure) - stats::median(plot_df$measure) / 100 * 4, length(refinements)),
+                          x     = refinements,
+                          label = rep("\u2605", length(refinements)))
+        )
 
     ggplot2::ggplot(plot_df,
-                    ggplot2::aes(x = itvw_seq, y = prop_novel)) +
+                    ggplot2::aes(x = .data$Interview, y = .data$measure, fill = .data$Code, colour = .data$Code)) +
         ggplot2::theme_bw() +
-        ggplot2::theme(panel.grid.minor = ggplot2::element_blank()) +
-        ggplot2::geom_line(stat    = "smooth",
-                           method  = method,
-                           formula = formula,
-                           alpha   = 0.5,
-                           se      = FALSE) +
-        ggplot2::geom_point() +
-        ggplot2::ylab("Proportion of novel codes") +
-        ggplot2::xlab("Interview sequence number") +
+        ggplot2::theme(panel.grid.minor.x = ggplot2::element_blank(),
+                       panel.grid.major.x = ggplot2::element_blank()) +
+        ggplot2::geom_bar(stat = "identity", width = 0.7) +
+        ggplot2::scale_fill_manual(values   = c(Duplicate = "gray90", Novel = "gray20")) +
+        ggplot2::scale_colour_manual(values = c(Duplicate = "gray80", Novel = "gray10")) +
+        ggplot2::theme(legend.position = "top") +
+        ggplot2::ylab(y_label) +
+        ggplot2::xlab("Interview order") +
         annotate_refinements
 }
+
 
