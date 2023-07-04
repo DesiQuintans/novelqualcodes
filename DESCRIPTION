@@ -1,7 +1,7 @@
 Package: novelcodes
 Type: Package
 Title: Assess and Present Stopping Points in Qualitative Interviews Based on Novel Codes
-Version: 0.1.0
+Version: 0.2.0
 URL: https://github.com/DesiQuintans/novelcodes
 BugReports: https://github.com/DesiQuintans/novelcodes/issues
 Authors@R: c(
@@ -27,5 +27,6 @@ Depends:
 Imports:
     readxl,
     naturalsort,
-    ggplot2
+    ggplot2,
+    stats
 RoxygenNote: 7.2.3
