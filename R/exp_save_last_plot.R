@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun {
+#' \dontrun{
 #' plot_novelty(interview_scores)
 #'
 #' save_last_plot("my_file.png", "8 x 6 in")
@@ -30,6 +30,3 @@ save_last_plot <- function(filename, size, dpi = 300, ...) {
                     width = as.numeric(split_size[2]), height = as.numeric(split_size[4]),
                     units = split_size[5], dpi = dpi, ...)
 }
-
-
-

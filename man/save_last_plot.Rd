@@ -26,7 +26,7 @@ This function returns nothing, but has the side-effect of writing a file to \cod
 Save the most recent plot to a file
 }
 \examples{
-\dontrun {
+\dontrun{
 plot_novelty(interview_scores)
 
 save_last_plot("my_file.png", "8 x 6 in")
