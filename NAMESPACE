@@ -3,5 +3,6 @@
 export(import_coding_matrices)
 export(plot_novel_cumsum)
 export(plot_novelty)
+export(save_last_plot)
 export(score_codes)
 importFrom(ggplot2,.data)
