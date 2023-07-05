@@ -27,7 +27,7 @@ save_last_plot <- function(filename, size, dpi = 300, ...) {
                                             size)))
 
     ggplot2::ggsave(filename = filename, plot = ggplot2::last_plot(),
-                    width = split_size[2], height = split_size[4],
+                    width = as.numeric(split_size[2]), height = as.numeric(split_size[4]),
                     units = split_size[5], dpi = dpi, ...)
 }
 
