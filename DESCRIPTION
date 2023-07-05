@@ -28,5 +28,6 @@ Imports:
     readxl,
     naturalsort,
     ggplot2,
-    stats
+    stats,
+    utils
 RoxygenNote: 7.2.3

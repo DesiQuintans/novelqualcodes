@@ -23,39 +23,79 @@
 import_coding_matrices <- function(path, recursive = FALSE) {
     # Get all Excel files in the path
     flist <- list.files(path,
-                        pattern = "\\.(xls|xlsx)$",
-                        ignore.case = TRUE,
-                        recursive = recursive,
+                        pattern      = "(xlsx|xls)$",
+                        all.files    = TRUE,
+                        full.names   = TRUE,
+                        recursive    = recursive,
+                        ignore.case  = TRUE,
                         include.dirs = FALSE,
-                        full.names = TRUE)
+                        no..         = TRUE)
 
     # Use file basename for sorting instead of the full path, or else files in
     # subfolders will become mis-sorted.
     # naturalorder() is essential; sort() is not number-aware and puts
     # "int1" and "int10" together.
-    flist <- flist[naturalsort::naturalorder(basename(flist))]
+    filenames <- basename(flist)
+    flist <- flist[naturalsort::naturalorder(filenames)]
 
-    # Import sorted file list. When the codes are counted, it will iterate on
-    # each interview in their proper chronological order.
-    result <-
-        Map(function(this_file) {
-                df <- readxl::read_excel(this_file, col_types = "text", .name_repair = "minimal")
+    num_files <- length(flist)
 
-                if (ncol(df) != 2) {
-                    # Guard against multi-person export.
-                    stop(sprintf("The input file '%s' has %i columns, but it should only have 2 columns.\nHave you exported more than one participant in this file?\nExpecting only 2 columns: #1 for codes, and #2 for counts.",
-                                 path, ncol(df)))
-                }
+    message()  # Newline
 
-                colnames(df) <- c("code", "freq")
+    result <- vector(mode = "list", length = num_files)
 
-                df$code <- gsub("^\\d+\\s*:\\s*", "", df$code)  # Remove Nvivo-generated ID numbers at start of codes.
+    for (i in seq_along(flist)) {
+        this_file <- flist[i]
 
-                df <- df[(df$freq > 0) & !is.na(df$freq), ]  # Remove codes that are unused
-            },
-            flist)
+        msg_format <- sprintf("(%%%1$i.0i / %%%1$i.0i) Reading %%s", nchar(num_files))
+        message(sprintf(msg_format, i, num_files, basename(this_file)))
 
-    # TODO: Announce the basenames here so the user can double-check them.
+        df <- readxl::read_excel(this_file, col_types = "text", .name_repair = "minimal")
+
+        if (ncol(df) != 2) {
+            # Guard against multi-person export.
+            stop(sprintf("The input file '%s' has %i columns, but it should only have 2 columns.\nHave you exported more than one participant in this file?\nExpecting only 2 columns: #1 for codes, and #2 for counts.",
+                         path, ncol(df)))
+        }
+
+        colnames(df) <- c("code", "freq")
+
+        df$code <- gsub("^\\d+\\s*:\\s*", "", df$code)  # Remove Nvivo-generated ID numbers at start of codes.
+
+        df <- df[(df$freq > 0) & !is.na(df$freq), ]  # Remove codes that are unused
+
+        result[[i]] <- df
+    }
+
+    message("\n", length(result), " files were read.")
+
+    # Also double-check for Excel sheets in subdirectories.
+    if (recursive == FALSE) {
+        nested_files <- list.files(path,
+                                   pattern      = "\\.(xls|xlsx)$",
+                                   all.files    = TRUE,
+                                   full.names   = TRUE,
+                                   recursive    = TRUE,
+                                   ignore.case  = TRUE,
+                                   include.dirs = FALSE,
+                                   no..         = TRUE)
+
+        nested_files <- setdiff(nested_files, flist)  # Files in the recursive search that were not in the original search.
+
+        num_others <- length(nested_files)
+
+        if (num_others > 0) {
+            message("\n")
+
+            warning(sprintf("Additionally, %i Excel file(s) were found in sub-directories but not imported:\n\n%s%s\n\nIf you wanted these, then set 'recursive = TRUE'.\nIf you didn't want them, then ignore this warning.",
+                            num_others,
+                            paste(paste("- ", utils::head(nested_files, 6)), collapse = "\n"),
+                            ifelse(num_others > 6, sprintf("\n... and %i others.", num_others - 6), "")
+                            ),
+                    call. = FALSE)
+
+        }
+    }
 
     return(result)
 }
