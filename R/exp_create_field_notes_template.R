@@ -9,8 +9,8 @@
 #' annotate plots created by [plot_novelty()] and [plot_richness()], and they're
 #' also requested by peer reviewers as part of the publication process.
 #'
-#' This template contains 5 columns (currently only the first one, `interview_num`,
-#' is actually used by the package, but this is subject to change):
+#' This template contains 5 columns (only the first one, `interview_num`,
+#' is currently used by the package, but this is subject to change):
 #'
 #' 1. `interview_num` is the upcoming interview number where these refinements
 #'    will take effect.

@@ -23,8 +23,8 @@ the reasons behind them. These "field notes" are used by this package to
 annotate plots created by \code{\link[=plot_novelty]{plot_novelty()}} and \code{\link[=plot_richness]{plot_richness()}}, and they're
 also requested by peer reviewers as part of the publication process.
 
-This template contains 5 columns (currently only the first one, \code{interview_num},
-is actually used by the package, but this is subject to change):
+This template contains 5 columns (only the first one, \code{interview_num},
+is currently used by the package, but this is subject to change):
 \enumerate{
 \item \code{interview_num} is the upcoming interview number where these refinements
 will take effect.
