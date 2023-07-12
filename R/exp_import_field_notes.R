@@ -1,6 +1,8 @@
 
 #' Import field notes from an Excel spreadsheet
 #'
+#' @aliases import_fieldnotes
+#'
 #' @description
 #' 'Field notes' in this context is a spreadsheet that records the refinements
 #' that a researcher makes throughout their interview process. This package is
@@ -40,3 +42,7 @@ import_field_notes <- function(path, ...) {
 
     return(result)
 }
+
+#' @rdname import_field_notes
+#' @export
+import_fieldnotes <- import_field_notes

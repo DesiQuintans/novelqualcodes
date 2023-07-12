@@ -33,3 +33,6 @@ save_last_plot("my_file.png", "8 x 6 in")
 }
 
 }
+\seealso{
+\code{\link[=plot_novelty]{plot_novelty()}}, \code{\link[=plot_richness]{plot_richness()}}
+}

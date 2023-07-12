@@ -20,6 +20,8 @@
 #' save_last_plot("my_file.png", "8 x 6 in")
 #' }
 #'
+#' @seealso [plot_novelty()], [plot_richness()]
+#'
 #' @md
 save_last_plot <- function(filename, size, dpi = 300, ...) {
     split_size <- unlist(regmatches(size,

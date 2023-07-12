@@ -2,9 +2,12 @@
 % Please edit documentation in R/exp_import_field_notes.R
 \name{import_field_notes}
 \alias{import_field_notes}
+\alias{import_fieldnotes}
 \title{Import field notes from an Excel spreadsheet}
 \usage{
 import_field_notes(path, ...)
+
+import_fieldnotes(path, ...)
 }
 \arguments{
 \item{path}{(Character) The full path (including filename) to the Excel spreadsheet.}
