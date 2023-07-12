@@ -19,10 +19,14 @@ A list of dataframes.
 \description{
 Coding matrices are built inside NVivo's \emph{Matrix Coding Query} tool, with codes
 as rows and one participant ("case") as column. These files should be exported as
-Excel spreadsheets (XLS or XLSX format), which is the default for NVivo.
+Excel spreadsheets (XLS or XLSX format), which is the default for NVivo. There
+must only be one participant per file.
 
 Filenames \strong{must} reflect the chronological order of interviews when they are
 sorted. You can do this by naming them in sequence like \emph{"Interview 07 PID 2345"},
 or by including a YMD HM timestamp like \emph{"2023-06-17 1345"}. Sorting is number-aware
 and only uses the filename itself (i.e. file path is ignored during sorting).
+}
+\seealso{
+\code{\link[=score_codes]{score_codes()}}
 }

@@ -1,6 +1,6 @@
-- [ ] Is package name 'novelcodes' okay?
-- [ ] Kam to review his author listing in DESCRIPTION.
-- [ ] Kam to check/write Title and Description of package in DESCRIPTION.
+- [x] Is package name 'novelcodes' okay?
+- [x] Kam to review his author listing in DESCRIPTION.
+- [x] Kam to check/write Title and Description of package in DESCRIPTION.
 
 - [ ] Desi to include some example data in inst
 - [ ] Desi to write examples

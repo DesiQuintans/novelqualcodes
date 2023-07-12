@@ -22,10 +22,21 @@ A dataframe, with one row per interview and these columns:
 }
 }
 \description{
-The definition of whether a code is \emph{novel} or \emph{duplicated} is entirely
-chronological; a \strong{novel code} is a topic/idea/concept that Interviewee 17
-mentions, but which was not mentioned by Interviewees 1 through 16. A
-\strong{duplicate code} is one that has been talked about by other interviewees
-previously. The cumulative sum of novel codes is used to visualise a stopping
+'Novel' and 'duplicate' codes are scored once per interview; the number of
+times they are spoken in an interview does not matter.
+
+The definition of whether a code is \emph{novel} or \emph{duplicated} is
+entirely chronological:
+\itemize{
+\item A \strong{novel code} is a topic/idea/concept that, for example, is mentioned by
+Interviewee 17, but was not mentioned by Interviewees 1 through 16.
+\item A \strong{duplicate code} is one that has been talked about by other interviewees
+previously.
+}
+
+The cumulative sum of novel codes is used to visualise a stopping
 point for qualitative interviews.
+}
+\seealso{
+\code{\link[=plot_novelty]{plot_novelty()}}, \code{\link[=plot_richness]{plot_richness()}}
 }

@@ -1,5 +1,5 @@
 ---
-title: "`novelcodes`: Assess and Present Stopping Points in Qualitative Interviews Based on Novel Codes"
+title: "`novelqualcodes`: Assess and Present Stopping Points in Qualitative Interviews Based on Novel Codes"
 author: "Kam Wong & Desi Quintans"
 date: "2023-06-23"
 output: 
@@ -15,14 +15,24 @@ TODO: Introduction
 
 # Installation
 
+- [ ] Install instructions for R and RStudio https://posit.co/download/rstudio-desktop/
+- [ ] Start up RStudio
+- [ ] Install the package from CRAN `install.packages("novelqualcodes")`
+- [ ] Walkthrough of the package (example code)
+
 ```{r, eval=FALSE}
 # Install it from CRAN
-# Coming soon!
+install.packages("novelqualcodes")
 
 # Or install the live development version from Github.
 # Want to know what this version has compared to CRAN? See 'NEWS.md' above.
-remotes::install_github("DesiQuintans/novelcodes")
+remotes::install_github("DesiQuintans/novelqualcodes")
 ```
+
+
+
+
+
 
 TODO: Fake sample data
 

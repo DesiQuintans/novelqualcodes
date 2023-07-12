@@ -4,7 +4,8 @@
 #' @description
 #' Coding matrices are built inside NVivo's _Matrix Coding Query_ tool, with codes
 #' as rows and one participant ("case") as column. These files should be exported as
-#' Excel spreadsheets (XLS or XLSX format), which is the default for NVivo.
+#' Excel spreadsheets (XLS or XLSX format), which is the default for NVivo. There
+#' must only be one participant per file.
 #'
 #' Filenames **must** reflect the chronological order of interviews when they are
 #' sorted. You can do this by naming them in sequence like _"Interview 07 PID 2345"_,
@@ -18,6 +19,8 @@
 #'
 #' @return A list of dataframes.
 #' @export
+#'
+#' @seealso [score_codes()]
 #'
 #' @md
 import_coding_matrices <- function(path, recursive = FALSE) {
@@ -63,6 +66,10 @@ import_coding_matrices <- function(path, recursive = FALSE) {
         df$code <- gsub("^\\d+\\s*:\\s*", "", df$code)  # Remove Nvivo-generated ID numbers at start of codes.
 
         df <- df[(df$freq > 0) & !is.na(df$freq), ]  # Remove codes that are unused
+
+        # 1. NVivo turns folders into codes (but those codes are never used)
+        # 2. Removes codes that were used by others in the future
+
 
         result[[i]] <- df
     }
