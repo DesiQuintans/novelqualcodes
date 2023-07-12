@@ -59,6 +59,6 @@ plot_novelty <- function(score_df, refinements = integer(0)) {
         ggplot2::scale_fill_manual(values = c(`TRUE`  = "black",
                                               `FALSE` = "grey80")) +
         ggplot2::theme(legend.position = "none") +
-        ggplot2::ylab("Cumulative sum of novel codes") +
-        ggplot2::xlab("Interview order")
+        ggplot2::ylab("Cumulative sum of novel interview codes") +
+        ggplot2::xlab("Interview order\n(Refinements indicated by dashed lines)")
 }

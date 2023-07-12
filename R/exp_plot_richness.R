@@ -1,5 +1,5 @@
 
-#' Plot novelty of interview codes over time
+#' Plot richness of interview codes over time
 #'
 #' The full definition of novel and duplicate codes is in [score_codes()].
 #' Briefly, 'novel' codes are topics/ideas/concepts that were not mentioned in
@@ -40,16 +40,16 @@ plot_richness <- function(score_df, refinements = integer(0)) {
     # be made for its usefulness.
     percent <- FALSE
     if (isTRUE(percent)) {
-        y_label = "Percent"
+        y_label = "Percent of interview codes"
         plot_df$measure <- plot_df$Proportion * 100
     } else {
-        y_label = "Count"
+        y_label = "Count of interview codes"
         plot_df$measure <- plot_df$n
     }
 
     annotate_refinements <- list(
         ggplot2::annotate(geom  = "text",
-                          y     = rep(min(plot_df$measure) - stats::median(plot_df$measure) / 100 * 4, length(refinements)),
+                          y     = rep(min(plot_df$measure) - stats::median(plot_df$measure) / 100 * 10, length(refinements)),
                           x     = refinements,
                           label = rep("\u2605", length(refinements)))
         )
@@ -73,7 +73,7 @@ plot_richness <- function(score_df, refinements = integer(0)) {
         ggplot2::scale_colour_manual(values = line_clrs) +
         ggplot2::theme(legend.position = "top") +
         ggplot2::ylab(y_label) +
-        ggplot2::xlab("Interview order") +
+        ggplot2::xlab("Interview order\n(Refinements indicated by \u2605)") +
         annotate_refinements
 }
 

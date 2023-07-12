@@ -2,7 +2,7 @@
 % Please edit documentation in R/exp_plot_richness.R
 \name{plot_richness}
 \alias{plot_richness}
-\title{Plot novelty of interview codes over time}
+\title{Plot richness of interview codes over time}
 \usage{
 plot_richness(score_df, refinements = integer(0))
 }
