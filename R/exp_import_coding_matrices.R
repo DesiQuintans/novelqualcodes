@@ -20,7 +20,7 @@
 #' @return A list of dataframes.
 #' @export
 #'
-#' @seealso [score_codes()]
+#' @seealso [score_codes()], [import_field_notes()]
 #'
 #' @md
 import_coding_matrices <- function(path, recursive = FALSE) {

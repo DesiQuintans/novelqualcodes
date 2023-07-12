@@ -28,5 +28,5 @@ or by including a YMD HM timestamp like \emph{"2023-06-17 1345"}. Sorting is num
 and only uses the filename itself (i.e. file path is ignored during sorting).
 }
 \seealso{
-\code{\link[=score_codes]{score_codes()}}
+\code{\link[=score_codes]{score_codes()}}, \code{\link[=import_field_notes]{import_field_notes()}}
 }
