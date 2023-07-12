@@ -24,8 +24,9 @@ Description: In semi-structured interviews that are analysed using the
     has not been previously mentioned by other interviewees) provides insight
     into the richness of qualitative information. This package provides tools
     to visualise when refinements occur and how that affects the trends of
-    novel and duplicate codes. These visualisations can help the researcher
-    to decide on a stopping point for their interviews.
+    novel and duplicate codes. These visualisations, when used progressively when
+    new interviews are finished, can help the researcher decide on a stopping 
+    point for their interviews.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
