@@ -38,7 +38,7 @@ import_field_notes <- function(path, ...) {
     result <- list(ref_points = as.integer(unique(fieldnotes[[1]])),
                    df = fieldnotes)
 
-    class(result) <- "field_note"
+    class(result) <- "field_notes"
 
     return(result)
 }
