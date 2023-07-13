@@ -23,6 +23,10 @@
 #'    refinements were made to the interview questions. For example, `c(10, 15)`
 #'    means that interview questions were revised twice: First **before** the
 #'    10th interview, and then again **before** the 15th interview.
+#' @param col (List) A List containing named Character vectors. Accepted names are:
+#'    - `stroke` is the colour of point outlines as well as the line linking points together.
+#'    - `fill_ref` is the colour of points after a refinement.
+#'    - `fill` is the fill colour of points were no refinements were made.
 #'
 #' @return A ggplot object.
 #' @export
@@ -32,7 +36,7 @@
 #' @seealso [score_codes()], [import_field_notes()], [plot_richness()], [save_last_plot()]
 #'
 #' @importFrom ggplot2 .data
-plot_novelty <- function(score_df, refinements = integer(0)) {
+plot_novelty <- function(score_df, refinements = integer(0), col = list(stroke = "black", fill_ref = "black", fill = "grey80")) {
     if ("field_notes" %in% class(refinements)) {
         refinements <- refinements$ref_points
     }
@@ -53,11 +57,11 @@ plot_novelty <- function(score_df, refinements = integer(0)) {
         ggplot2::theme(panel.grid.minor   = ggplot2::element_blank(),
                        panel.grid.major.x = ggplot2::element_blank()) +
         annotate_refinements +
-        ggplot2::geom_line() +
+        ggplot2::geom_line(linewidth = 1, colour = col$stroke) +
         ggplot2::geom_point(ggplot2::aes(fill = .data$mark_refinement),
-                            size = 2, shape = 21, colour = "black") +
-        ggplot2::scale_fill_manual(values = c(`TRUE`  = "black",
-                                              `FALSE` = "grey80")) +
+                            size = 2, shape = 21, colour = col$stroke) +
+        ggplot2::scale_fill_manual(values = c(`TRUE`  = col$fill_ref,
+                                              `FALSE` = col$fill)) +
         ggplot2::theme(legend.position = "none") +
         ggplot2::ylab("Cumulative sum of novel interview codes") +
         ggplot2::xlab("Interview order\n(Refinements indicated by dashed lines)")

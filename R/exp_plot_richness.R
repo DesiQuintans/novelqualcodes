@@ -19,6 +19,9 @@
 #'    sequence) refinements were made to the interview questions. For example,
 #'    `c(10, 15)` means that interview questions were revised twice: First **before**
 #'    the 10th interview, and then again **before** the 15th interview.
+#' @param col (List) A List containing named Character vectors. Accepted names are:
+#'    - `stroke_novel` and `stroke_duplicate` control line colours for novel and duplicate codes.
+#'    - `fill_novel` and `fill_duplicate` control fill colours for novel and duplicate codes.
 #'
 #' @return A ggplot object.
 #' @export
@@ -27,7 +30,9 @@
 #'
 #' @md
 #' @importFrom ggplot2 .data
-plot_richness <- function(score_df, refinements = integer(0)) {
+plot_richness <- function(score_df, refinements = integer(0),
+                          col = list(stroke_novel = "black", stroke_duplicate = "gray80",
+                                     fill_novel = "black", fill_duplicate = "gray90")) {
     if ("field_notes" %in% class(refinements)) {
         refinements <- refinements$ref_points
     }
@@ -49,13 +54,10 @@ plot_richness <- function(score_df, refinements = integer(0)) {
 
     annotate_refinements <- list(
         ggplot2::annotate(geom  = "text",
-                          y     = rep(min(plot_df$measure) - stats::median(plot_df$measure) / 100 * 10, length(refinements)),
-                          x     = refinements,
+                          y     = rep(min(plot_df$measure) - 0.50, length(refinements)),
+                          x     = refinements, vjust = "top",
                           label = rep("\u2605", length(refinements)))
         )
-
-    fill_clrs <- c(Duplicate = "gray90", Novel = "gray20")
-    line_clrs <- c(Duplicate = "gray80", Novel = "gray10")
 
     ggplot2::ggplot(plot_df,
                     ggplot2::aes(x = .data$Interview, y = .data$measure,
@@ -67,18 +69,12 @@ plot_richness <- function(score_df, refinements = integer(0)) {
                        panel.grid.major.x = ggplot2::element_blank()) +
         ggpattern::geom_bar_pattern(stat = "identity", width = 0.7) +
         ggpattern::scale_pattern_manual(values = c(Duplicate = "stripe", Novel = "none")) +
-        ggpattern::scale_pattern_colour_manual(values = fill_clrs) +
-        ggpattern::scale_pattern_fill_manual(values = line_clrs) +
-        ggplot2::scale_fill_manual(values = fill_clrs) +
-        ggplot2::scale_colour_manual(values = line_clrs) +
+        ggpattern::scale_pattern_colour_manual(values = c(Duplicate = col$fill_duplicate,   Novel = col$fill_novel)) +
+        ggpattern::scale_pattern_fill_manual(values = c(Duplicate = col$stroke_duplicate, Novel = col$stroke_novel)) +
+        ggplot2::scale_fill_manual(values = c(Duplicate = col$fill_duplicate,   Novel = col$fill_novel)) +
+        ggplot2::scale_colour_manual(values = c(Duplicate = col$stroke_duplicate, Novel = col$stroke_novel)) +
         ggplot2::theme(legend.position = "top") +
         ggplot2::ylab(y_label) +
         ggplot2::xlab("Interview order\n(Refinements indicated by \u2605)") +
         annotate_refinements
 }
-
-
-
-
-
-
