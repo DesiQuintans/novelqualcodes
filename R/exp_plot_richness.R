@@ -55,7 +55,7 @@ plot_richness <- function(score_df, refinements = integer(0),
     annotate_refinements <- list(
         ggplot2::annotate(geom  = "text",
                           y     = rep(min(plot_df$measure) - 0.50, length(refinements)),
-                          x     = refinements, vjust = "top",
+                          x     = refinements,
                           label = rep("\u2605", length(refinements)))
         )
 
