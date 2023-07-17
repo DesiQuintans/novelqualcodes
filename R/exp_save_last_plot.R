@@ -37,7 +37,8 @@
 #' @seealso [plot_novelty()], [plot_richness()]
 #'
 #' @md
-save_last_plot <- function(filename, size, dpi = 300, ...) {
+save_last_plot <- function(filename = stop("A save path and filename must be specified."),
+                           size = "4 x 3 in", dpi = 300, ...) {
     split_size <- unlist(regmatches(size,
                                     regexec("([0-9.]+)\\s*(x|\\s)\\s*([0-9.]+)\\s*(.+)",
                                             size)))

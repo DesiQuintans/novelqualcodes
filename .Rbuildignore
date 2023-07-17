@@ -4,3 +4,5 @@
 ^README\.Rmd
 ^\.git
 ^README_files
+^CRAN-SUBMISSION$
+^cran-comments\.md$

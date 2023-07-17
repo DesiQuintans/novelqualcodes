@@ -4,7 +4,12 @@
 \alias{save_last_plot}
 \title{Save the most recent plot to a file}
 \usage{
-save_last_plot(filename, size, dpi = 300, ...)
+save_last_plot(
+  filename = stop("A save path and filename must be specified."),
+  size = "4 x 3 in",
+  dpi = 300,
+  ...
+)
 }
 \arguments{
 \item{filename}{(Character) The path and filename of the file to create.}

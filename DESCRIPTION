@@ -5,14 +5,14 @@ Version: 0.7.0
 URL: https://github.com/DesiQuintans/novelqualcodes
 BugReports: https://github.com/DesiQuintans/novelqualcodes/issues
 Authors@R: c(
-    person(given   = "Kam", 
-           family  = "Wong", 
-           email   = "kam.wong@sydney.edu.au", 
+    person(given   = "Kam",
+           family  = "Wong",
+           email   = "kam.wong@sydney.edu.au",
            role    = c("aut", "cph"),
            comment = c(ORCID = "0000-0003-1898-7678")),
-    person(given   = "Desi", 
-           family  = "Quintans", 
-           email   = "science@desiquintans.com", 
+    person(given   = "Desi",
+           family  = "Quintans",
+           email   = "science@desiquintans.com",
            role    = c("cre", "aut", "cph"),
            comment = c(ORCID = "0000-0003-3356-0293"))
            )
@@ -25,7 +25,7 @@ Description: In semi-structured interviews that are analysed using the
     into the richness of qualitative information. This package provides tools
     to visualise when refinements occur and how that affects the trends of
     novel and duplicate codes. These visualisations, when used progressively when
-    new interviews are finished, can help the researcher decide on a stopping 
+    new interviews are finished, can help the researcher decide on a stopping
     point for their interviews.
 License: MIT + file LICENSE
 Encoding: UTF-8
