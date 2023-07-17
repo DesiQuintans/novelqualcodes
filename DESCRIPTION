@@ -37,6 +37,9 @@ Imports:
     naturalsort,
     ggplot2,
     ggpattern,
-    stats,
     utils
 RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

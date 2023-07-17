@@ -36,6 +36,8 @@ previous interviews, whereas 'duplicate' codes are topics that other
 interviews have discussed previously.
 }
 \details{
+Some interviews will touch on many different topics and generate many different
+codes, whereas other interviews will be brief or limited. We call this 'richness'.
 This plot complements \code{\link[=plot_novelty]{plot_novelty()}} by visualising the richness of each
 interview in terms of novel and duplicate codes, in context with any
 refinements to interview questions that were made (marked by stars underneath

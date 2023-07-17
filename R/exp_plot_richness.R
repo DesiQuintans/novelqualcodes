@@ -6,6 +6,8 @@
 #' previous interviews, whereas 'duplicate' codes are topics that other
 #' interviews have discussed previously.
 #'
+#' Some interviews will touch on many different topics and generate many different
+#' codes, whereas other interviews will be brief or limited. We call this 'richness'.
 #' This plot complements [plot_novelty()] by visualising the richness of each
 #' interview in terms of novel and duplicate codes, in context with any
 #' refinements to interview questions that were made (marked by stars underneath
@@ -54,7 +56,7 @@ plot_richness <- function(score_df, refinements = integer(0),
 
     annotate_refinements <- list(
         ggplot2::annotate(geom  = "text",
-                          y     = rep(min(plot_df$measure) - 1, length(refinements)),
+                          y     = rep(max(plot_df$measure) + 1, length(refinements)),
                           x     = refinements,
                           label = rep("\u2605", length(refinements)))
         )

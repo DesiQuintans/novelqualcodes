@@ -2,7 +2,8 @@
 % Please edit documentation in R/novelqualcodes-package.R
 \docType{package}
 \name{novelqualcodes-package}
-\alias{{pkgname}-package}
+\alias{novelqualcodes}
+\alias{novelqualcodes-package}
 \title{novelqualcodes: Visualise the Path to a Stopping Point in Qualitative Interviews Based on Novel Codes}
 \description{
 In semi-structured interviews that are analysed using the 'framework' method, it is not always clear how refinements to interview questions affect the decision of when to stop interviews. The trend of 'novel' and 'duplicate' interview codes (novel codes are information that has not been previously mentioned by other interviewees) provides insight into the richness of qualitative information. This package provides tools to visualise when refinements occur and how that affects the trends of novel and duplicate codes. These visualisations, when used progressively when new interviews are finished, can help the researcher decide on a stopping point for their interviews.
