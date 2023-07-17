@@ -27,6 +27,22 @@ sorted. You can do this by naming them in sequence like \emph{"Interview 07 PID 
 or by including a YMD HM timestamp like \emph{"2023-06-17 1345"}. Sorting is number-aware
 and only uses the filename itself (i.e. file path is ignored during sorting).
 }
+\examples{
+# A folder of example coding matrices included with the package
+path_to_matrices <- system.file("insect_study/matrices/", package = "novelqualcodes")
+print(path_to_matrices)
+
+# A list of files in that folder
+list.files(path_to_matrices)
+
+# Import them all at once
+my_matrices <- import_coding_matrices(path_to_matrices)
+
+# Look inside the result; each entry of 'my_matrices' is an interview, listed
+# in chronological order.
+print(my_matrices)
+
+}
 \seealso{
 \code{\link[=score_codes]{score_codes()}}, \code{\link[=import_field_notes]{import_field_notes()}}
 }

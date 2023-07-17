@@ -14,10 +14,24 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' plot_novelty(interview_scores)
+#' \donttest{
+#' # Coding matrices included with the package
+#' path_to_matrices <- system.file("insect_study/matrices/", package = "novelqualcodes")
 #'
-#' save_last_plot("my_file.png", "8 x 6 in")
+#' # Import the data
+#' my_matrices    <- import_coding_matrices(path_to_matrices)
+#'
+#' # Score novel and duplicate codes
+#' my_scores <- score_codes(my_matrices)
+#'
+#' # Generate a plot with no refinements
+#' plot_richness(score_df = my_scores)
+#'
+#' # Save it to a temporary directory
+#' save_last_plot(file.path(tempdir(), "test_plot.png"), size = "4 x 3 in")
+#'
+#' # Open the temporary directory (if session is running interactively)
+#' if (interactive()) { utils::browseURL(tempdir()) }
 #' }
 #'
 #' @seealso [plot_novelty()], [plot_richness()]

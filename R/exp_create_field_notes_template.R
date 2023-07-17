@@ -34,7 +34,7 @@
 #' }
 #'
 #' @md
-create_field_notes_template <- function(path) {
+create_field_notes_template <- function(path = stop("A save path must be specified.")) {
     # Note that writing a .xlsx file from R can't be done without the `xlsx`
     # package, which is Java-based and may introduce some headaches because of
     # that requirement. Instead, I've pre-made a template in inst/template/ and

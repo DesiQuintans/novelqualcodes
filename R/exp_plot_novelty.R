@@ -33,6 +33,27 @@
 #'
 #' @md
 #'
+#' @examples
+#' # Field notes and coding matrices included with the package
+#' path_to_notes    <- system.file("insect_study/records/refinements.xlsx", package = "novelqualcodes")
+#' path_to_matrices <- system.file("insect_study/matrices/", package = "novelqualcodes")
+#'
+#' # Import the data
+#' my_refinements <- import_field_notes(path_to_notes)
+#' my_matrices    <- import_coding_matrices(path_to_matrices)
+#'
+#' # Score novel and duplicate codes
+#' my_scores <- score_codes(my_matrices)
+#'
+#' # Generate a plot with no refinements
+#' plot_novelty(score_df = my_scores)
+#'
+#' # Generate a plot using scored codes and imported refinements
+#' plot_novelty(score_df = my_scores, refinements = my_refinements)
+#'
+#' # Generate a plot using scored codes and a vector of refinement times
+#' plot_novelty(score_df = my_scores, refinements = c(4, 8, 10))
+#'
 #' @seealso [score_codes()], [import_field_notes()], [plot_richness()], [save_last_plot()]
 #'
 #' @importFrom ggplot2 .data

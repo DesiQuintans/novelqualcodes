@@ -16,15 +16,16 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' my_interviews <- import_coding_matrices("C:/path/to/folder/of/interviews")
-#' my_codes <- score_codes(my_interviews)
-#' my_notes <- import_field_notes("C:/path/to/notes.xlsx")
+#' # An example field notes spreadsheet included with the package.
+#' path_to_notes <- system.file("insect_study/records/refinements.xlsx", package = "novelqualcodes")
+#' print(path_to_notes)
 #'
-#' # Demonstrating usage in plots
-#' plot_novelty(my_codes, refinements = my_notes)
-#' plot_richness(my_codes, refinements = my_notes)
-#'}
+#' # Importing the spreadsheet
+#' my_refinements <- import_field_notes(path_to_notes)
+#'
+#' # Looking at its contents
+#' str(my_refinements, max.level = 1)
+#' print(my_refinements$df)
 #'
 #' @md
 import_field_notes <- function(path, ...) {

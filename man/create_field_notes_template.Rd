@@ -5,9 +5,9 @@
 \alias{create_fieldnotes_template}
 \title{Create a template for refinement field notes}
 \usage{
-create_field_notes_template(path)
+create_field_notes_template(path = stop("A save path must be specified."))
 
-create_fieldnotes_template(path)
+create_fieldnotes_template(path = stop("A save path must be specified."))
 }
 \arguments{
 \item{path}{(Character) The path where the field notes template should

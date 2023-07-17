@@ -22,6 +22,21 @@
 #'
 #' @seealso [score_codes()], [import_field_notes()]
 #'
+#' @examples
+#' # A folder of example coding matrices included with the package
+#' path_to_matrices <- system.file("insect_study/matrices/", package = "novelqualcodes")
+#' print(path_to_matrices)
+#'
+#' # A list of files in that folder
+#' list.files(path_to_matrices)
+#'
+#' # Import them all at once
+#' my_matrices <- import_coding_matrices(path_to_matrices)
+#'
+#' # Look inside the result; each entry of 'my_matrices' is an interview, listed
+#' # in chronological order.
+#' print(my_matrices)
+#'
 #' @md
 import_coding_matrices <- function(path, recursive = FALSE) {
     # Get all Excel files in the path

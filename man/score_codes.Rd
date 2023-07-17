@@ -37,6 +37,25 @@ previously.
 The cumulative sum of novel codes is used to visualise a stopping
 point for qualitative interviews.
 }
+\examples{
+# A folder of example coding matrices included with the package
+path_to_matrices <- system.file("insect_study/matrices/", package = "novelqualcodes")
+print(path_to_matrices)
+
+# A list of files in that folder
+list.files(path_to_matrices)
+
+# Import them all at once
+my_matrices <- import_coding_matrices(path_to_matrices)
+
+# Score them for novel and duplicate codes
+my_scores <- score_codes(my_matrices)
+
+# Look inside the result; novel and duplicate codes are scored across
+# all interviews.
+print(my_scores)
+
+}
 \seealso{
 \code{\link[=plot_novelty]{plot_novelty()}}, \code{\link[=plot_richness]{plot_richness()}}
 }

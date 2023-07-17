@@ -1,7 +1,7 @@
 Package: novelqualcodes
 Type: Package
 Title: Visualise the Path to a Stopping Point in Qualitative Interviews Based on Novel Codes
-Version: 0.6.0
+Version: 0.7.0
 URL: https://github.com/DesiQuintans/novelqualcodes
 BugReports: https://github.com/DesiQuintans/novelqualcodes/issues
 Authors@R: c(
