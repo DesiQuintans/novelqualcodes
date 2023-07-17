@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
-^todo\.md
 ^README\.Rmd
+^\.git
+^README_files
