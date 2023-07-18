@@ -46,7 +46,7 @@ To run this package, you need to have the _R_ statistical programming language i
 
 ## Step 2. Run an _R_ editor
 
-_R_ comes with a simple editor called `RGui.exe`, located in the installation directory. If you want something a little easier to use that has more features, you can download and install _RStudio_ from <https://posit.co/download/rstudio-desktop>. 
+_R_ comes with a simple editor called `RGui.exe`, located in the installation directory. If you want something a little easier to use that has more features, you can download and install _RStudio_ from <https://posit.co/download/rstudio-desktop/>. 
 
 Either way, start your chosen editor and you'll be greeted with the _R_ console. Basic information about how to use _R_ is outside the scope of this guided tour; ample resources exist on the internet.
 

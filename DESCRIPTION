@@ -1,7 +1,7 @@
 Package: novelqualcodes
 Type: Package
 Title: Visualise the Path to a Stopping Point in Qualitative Interviews Based on Novel Codes
-Version: 0.7.0
+Version: 0.8.0
 URL: https://github.com/DesiQuintans/novelqualcodes
 BugReports: https://github.com/DesiQuintans/novelqualcodes/issues
 Authors@R: c(
@@ -17,16 +17,15 @@ Authors@R: c(
            comment = c(ORCID = "0000-0003-3356-0293"))
            )
 Maintainer: Desi Quintans <science@desiquintans.com>
-Description: In semi-structured interviews that are analysed using the
-    'framework' method, it is not always clear how refinements to interview
-    questions affect the decision of when to stop interviews. The trend of
-    'novel' and 'duplicate' interview codes (novel codes are information that
-    has not been previously mentioned by other interviewees) provides insight
-    into the richness of qualitative information. This package provides tools
-    to visualise when refinements occur and how that affects the trends of
-    novel and duplicate codes. These visualisations, when used progressively when
-    new interviews are finished, can help the researcher decide on a stopping
-    point for their interviews.
+Description: In semi-structured interviews that use the 'framework' method, it
+    is not always clear how refinements to interview questions affect the
+    decision of when to stop interviews. The trend of 'novel' and 'duplicate'
+    interview codes (novel codes are information that other interviewees have
+    not previously mentioned) provides insight into the richness of qualitative
+    information. This package provides tools to visualise when refinements occur
+    and how that affects the trends of novel and duplicate codes. These
+    visualisations, when used progressively as new interviews are finished, can
+    help the researcher to decide on a stopping point for their interviews.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
