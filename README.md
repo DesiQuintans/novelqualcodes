@@ -94,12 +94,14 @@ this guided tour; ample resources exist on the internet.
 
 ## Step 3. Install *novelqualcodes*
 
-You can install the package by running (i.e. type this in the console
-and hit *Enter*) the function:
+Currently, you can install the actively-developed and up-to-date version from GitHub:
 
 ``` r
-install.packages("novelqualcodes")
+install.packages("remotes")
+remotes::install_github("DesiQuintans/novelqualcodes")
 ```
+
+When CRAN accepts our package we'll update this readme with installation instructions for that also.
 
 You only need to install the package once; you don’t need to run this if
 you’ve installed it previously.
