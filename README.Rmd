@@ -28,8 +28,8 @@ _novelqualcodes_ is a package aimed at qualitative researchers doing semi-struct
 
 _novelqualcodes_ does this by importing 'coding matrices' that are exported from _NVivo_'s **Matrix Coding Query** tool and tracking the trends of _novel_ and _duplicate_ codes across interviews. Briefly:
 
-- A **novel code** is a topic/idea/concept that has not been mentioned in an interview before. For example, a novel code is a topic that was mentioned by Interviewee 17, but which was not mentioned by Interviewees 1 through 16.
-- A **duplicate code** is one that has been talked about by other interviewees previously.
+- A **novel code** is a topic/idea/concept that has not been mentioned in an interview before. For example, a novel code is a topic that was mentioned in Interview 17, but which was not mentioned in Interviews 1 through 16.
+- A **duplicate code** is one that has been talked about in other interviews previously.
 
 _novelqualcodes_ gets information about refinements by importing a spreadsheet of field notes where you have recorded when refinements were made, what was done, and why it was done. Code trends and refinements are displayed together in publication-ready plots.
 
@@ -53,13 +53,17 @@ Either way, start your chosen editor and you'll be greeted with the _R_ console.
 
 ## Step 3. Install _novelqualcodes_
 
-You can install the package by running (i.e. type this in the console and hit _Enter_) the function:
+Currently, you can install the actively-developed and up-to-date version from GitHub:
 
 ```{r eval=FALSE}
-install.packages("novelqualcodes")
+install.packages("remotes")
+remotes::install_github("DesiQuintans/novelqualcodes")
 ```
 
-You only need to install the package once; you don't need to run this if you've installed it previously.
+When CRAN accepts our package we'll update this readme with installation instructions for that also.
+
+You only need to install the package once; you don’t need to run this if
+you’ve installed it previously.
 
 
 ## Step 4. Attach the package to the session
@@ -117,7 +121,7 @@ For our purposes, a coding matrix is an Excel spreadsheet where each row is a un
 ![](vignettes/nvivo03.jpg)
 
 4. Click **Run Query**. The coding matrix will be generated.
-    - You _do not_ need to remove rows with a count of 0 (a code that was not mentioned by the interviewee). They will be ignored by _novelqualcodes_.
+    - You _do not_ need to remove rows with a count of 0 (a code that was not mentioned in the interview). They will be ignored by _novelqualcodes_.
 
 ![](vignettes/nvivo04.jpg)
 
@@ -145,7 +149,7 @@ For our purposes, a coding matrix is an Excel spreadsheet where each row is a un
 
 ## File structure
 
-Imagine that you are interested in public perceptions of insects. You've interviewed 15 people, you've made a few refinements, and you want to see how things are going. You have exported coding matrices for the 15 interviews from _NVivo_ and put them into ***C:/insect_study/matrices/**. You also have a field notes spreadsheet, located at **C:/insect_study/records/refinements.xlsx**. So your file structure looks like this: 
+Imagine that you are interested in public perceptions of insects. You've done 15 one-on-one interviews, you've made a few refinements, and you want to see how things are going. You have exported coding matrices for the 15 interviews from _NVivo_ and put them into ***C:/insect_study/matrices/**. You also have a field notes spreadsheet, located at **C:/insect_study/records/refinements.xlsx**. So your file structure looks like this: 
 
 ```
 C:/
@@ -314,6 +318,8 @@ If we want to save the most recent plot to a 10 x 5 cm image for use in a paper,
 save_last_plot(filename = "C:/insect_study/plots/novelty.png", 
                size = "10 x 5 cm", dpi = 300)
 ```
+
+As a best practice, your figure caption should remind the reader of how many participants were present in each interview. 
 
 
 ## Step 4. Plot the 'richness' of interviews

@@ -59,10 +59,10 @@ trends of *novel* and *duplicate* codes across interviews. Briefly:
 
 - A **novel code** is a topic/idea/concept that has not been mentioned
   in an interview before. For example, a novel code is a topic that was
-  mentioned by Interviewee 17, but which was not mentioned by
-  Interviewees 1 through 16.
-- A **duplicate code** is one that has been talked about by other
-  interviewees previously.
+  mentioned in Interview 17, but which was not mentioned in Interviews 1
+  through 16.
+- A **duplicate code** is one that has been talked about in other
+  interviews previously.
 
 *novelqualcodes* gets information about refinements by importing a
 spreadsheet of field notes where you have recorded when refinements were
@@ -86,7 +86,7 @@ follow the links to download an installer, and then run the installer.
 *R* comes with a simple editor called `RGui.exe`, located in the
 installation directory. If you want something a little easier to use
 that has more features, you can download and install *RStudio* from
-<https://posit.co/download/rstudio-desktop>.
+<https://posit.co/download/rstudio-desktop/>.
 
 Either way, start your chosen editor and you’ll be greeted with the *R*
 console. Basic information about how to use *R* is outside the scope of
@@ -94,14 +94,16 @@ this guided tour; ample resources exist on the internet.
 
 ## Step 3. Install *novelqualcodes*
 
-Currently, you can install the actively-developed and up-to-date version from GitHub:
+Currently, you can install the actively-developed and up-to-date version
+from GitHub:
 
 ``` r
 install.packages("remotes")
 remotes::install_github("DesiQuintans/novelqualcodes")
 ```
 
-When CRAN accepts our package we'll update this readme with installation instructions for that also.
+When CRAN accepts our package we’ll update this readme with installation
+instructions for that also.
 
 You only need to install the package once; you don’t need to run this if
 you’ve installed it previously.
@@ -174,7 +176,7 @@ produce spreadsheets in the correct format, which we detail below.
 
 4.  Click **Run Query**. The coding matrix will be generated.
     - You *do not* need to remove rows with a count of 0 (a code that
-      was not mentioned by the interviewee). They will be ignored by
+      was not mentioned in the interview). They will be ignored by
       *novelqualcodes*.
 
 ![](vignettes/nvivo04.jpg)
@@ -210,9 +212,9 @@ produce spreadsheets in the correct format, which we detail below.
 ## File structure
 
 Imagine that you are interested in public perceptions of insects. You’ve
-interviewed 15 people, you’ve made a few refinements, and you want to
-see how things are going. You have exported coding matrices for the 15
-interviews from *NVivo* and put them into
+done 15 one-on-one interviews, you’ve made a few refinements, and you
+want to see how things are going. You have exported coding matrices for
+the 15 interviews from *NVivo* and put them into
 \***C:/insect_study/matrices/**. You also have a field notes
 spreadsheet, located at **C:/insect_study/records/refinements.xlsx**. So
 your file structure looks like this:
@@ -410,6 +412,9 @@ a paper, we can run:
 save_last_plot(filename = "C:/insect_study/plots/novelty.png", 
                size = "10 x 5 cm", dpi = 300)
 ```
+
+As a best practice, your figure caption should remind the reader of how
+many participants were present in each interview.
 
 ## Step 4. Plot the ‘richness’ of interviews
 
