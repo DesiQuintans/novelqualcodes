@@ -28,9 +28,9 @@ times they are spoken in an interview does not matter.
 The definition of whether a code is \emph{novel} or \emph{duplicated} is
 entirely chronological:
 \itemize{
-\item A \strong{novel code} is a topic/idea/concept that, for example, is mentioned by
-Interviewee 17, but was not mentioned by Interviewees 1 through 16.
-\item A \strong{duplicate code} is one that has been talked about by other interviewees
+\item A \strong{novel code} is a topic/idea/concept that, for example, is mentioned in
+Interview 17, but was not mentioned in Interviews 1 through 16.
+\item A \strong{duplicate code} is one that has been talked about in other interviews
 previously.
 }
 

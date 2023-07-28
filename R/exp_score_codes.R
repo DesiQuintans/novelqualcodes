@@ -8,10 +8,10 @@
 #' The definition of whether a code is _novel_ or _duplicated_ is
 #' entirely chronological:
 #'
-#' - A **novel code** is a topic/idea/concept that, for example, is mentioned by
-#' Interviewee 17, but was not mentioned by Interviewees 1 through 16.
-#' - A **duplicate code** is one that has been talked about by other interviewees
-#' previously.
+#' - A **novel code** is a topic/idea/concept that, for example, is mentioned in
+#'   Interview 17, but was not mentioned in Interviews 1 through 16.
+#' - A **duplicate code** is one that has been talked about in other interviews
+#'   previously.
 #'
 #' The cumulative sum of novel codes is used to visualise a stopping
 #' point for qualitative interviews.
