@@ -1,7 +1,7 @@
 ---
 title: "`novelqualcodes`: Assess and Present Stopping Points in Qualitative Interviews Based on Novel Codes"
-author: "Kam Wong & Desi Quintans"
-date: "2023-06-23"
+author: "Kam Wong & Desi Quintans."
+date: '`r format(Sys.Date(), "%B %d, %Y")`.'
 output: 
     github_document:
         toc: TRUE
