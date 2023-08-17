@@ -53,17 +53,22 @@ Either way, start your chosen editor and you'll be greeted with the _R_ console.
 
 ## Step 3. Install _novelqualcodes_
 
-Currently, you can install the actively-developed and up-to-date version from GitHub:
+You will probably want to install the package from CRAN in the standard way:
+
+```{r eval=FALSE}
+install.packages("novelqualcodes")
+```
+
+Or advanced users may want to install the actively-developed and up-to-date version
+from GitHub:
 
 ```{r eval=FALSE}
 install.packages("remotes")
 remotes::install_github("DesiQuintans/novelqualcodes")
 ```
 
-When CRAN accepts our package we'll update this readme with installation instructions for that also.
-
-You only need to install the package once; you don’t need to run this if
-you’ve installed it previously.
+You only need to install the package once; you don’t need to re-install the package if
+you’ve already installed it previously.
 
 
 ## Step 4. Attach the package to the session

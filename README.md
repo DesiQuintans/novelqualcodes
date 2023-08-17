@@ -1,7 +1,8 @@
-`novelqualcodes`: Visualise the Path to a Stopping Point in Qualitative Interviews
+`novelqualcodes`: Visualise the Path to a Stopping Point in Qualitative
+Interviews
 ================
 Kam Wong & Desi Quintans.
-August 11, 2023.
+August 17, 2023.
 
 - [Aim of this document](#aim-of-this-document)
 - [What is *novelqualcodes*?](#what-is-novelqualcodes)
@@ -93,19 +94,23 @@ this guided tour; ample resources exist on the internet.
 
 ## Step 3. Install *novelqualcodes*
 
-Currently, you can install the actively-developed and up-to-date version
-from GitHub:
+You will probably want to install the package from CRAN in the standard
+way:
+
+``` r
+install.packages("novelqualcodes")
+```
+
+Or advanced users may want to install the actively-developed and
+up-to-date version from GitHub:
 
 ``` r
 install.packages("remotes")
 remotes::install_github("DesiQuintans/novelqualcodes")
 ```
 
-When CRAN accepts our package we’ll update this readme with installation
-instructions for that also.
-
-You only need to install the package once; you don’t need to run this if
-you’ve installed it previously.
+You only need to install the package once; you don’t need to re-install
+the package if you’ve already installed it previously.
 
 ## Step 4. Attach the package to the session
 
@@ -371,7 +376,7 @@ novel code generation is plateauing.
 plot_novelty(score_df = code_results, refinements = my_refinements)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 For this (very small and brief) example dataset, we can see that the
 three refinements we made before interviews 6, 9, and 13 did not
@@ -391,7 +396,7 @@ function without any refinements:
 plot_novelty(score_df = code_results)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Or if you know when you made refinements but don’t want to make a field
 notes file, you can provide the interview numbers directly:
@@ -400,7 +405,7 @@ notes file, you can provide the interview numbers directly:
 plot_novelty(score_df = code_results, refinements = c(4, 8, 10))
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### Saving a recent plot to a file
 
@@ -425,7 +430,7 @@ on many different topics while others will be quite brief; we call this
 plot_richness(score_df = code_results, refinements = my_refinements)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Refinements are marked with stars at each bar. Comparing this richness
 plot to the previous novelty plot, we see that each interview mentions a
@@ -442,7 +447,7 @@ this function without any refinements:
 plot_richness(score_df = code_results)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Or if you know when you made refinements but don’t want to make a field
 notes file, you can provide the interview numbers directly:
@@ -451,7 +456,7 @@ notes file, you can provide the interview numbers directly:
 plot_richness(score_df = code_results, refinements = c(4, 8, 10))
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 ## Step 5. Getting help from *R*
 
