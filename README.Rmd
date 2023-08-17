@@ -1,5 +1,5 @@
 ---
-title: "`novelqualcodes`: Assess and Present Stopping Points in Qualitative Interviews Based on Novel Codes"
+title: "`novelqualcodes`: Visualise the Path to a Stopping Point in Qualitative Interviews"
 author: "Kam Wong & Desi Quintans."
 date: '`r format(Sys.Date(), "%B %d, %Y")`.'
 output: 

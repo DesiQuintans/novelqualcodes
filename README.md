@@ -1,8 +1,7 @@
-`novelqualcodes`: Assess and Present Stopping Points in Qualitative
-Interviews Based on Novel Codes
+`novelqualcodes`: Visualise the Path to a Stopping Point in Qualitative Interviews
 ================
 Kam Wong & Desi Quintans.
-August 01, 2023.
+August 11, 2023.
 
 - [Aim of this document](#aim-of-this-document)
 - [What is *novelqualcodes*?](#what-is-novelqualcodes)
