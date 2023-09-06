@@ -105,7 +105,7 @@ For our purposes, a coding matrix is an Excel spreadsheet where each row is a un
 
 ### Getting coding matrices from _NVivo_
 
-1. In _NVivo_, click **Explore** → **Matrix Coding Query**. A new pane will open with two large boxes: one labelled _Rows_ and the other labelled _Columns_.
+1. In _NVivo_, click **Explore** then **Matrix Coding Query**. A new pane will open with two large boxes: one labelled _Rows_ and the other labelled _Columns_.
 
 ![](nvivo01.jpg)
 
@@ -147,7 +147,7 @@ For our purposes, a coding matrix is an Excel spreadsheet where each row is a un
 
 ## File structure
 
-Imagine that you are interested in public perceptions of insects. You've interviewed 15 people, you've made a few refinements, and you want to see how things are going. You have exported coding matrices for the 15 interviews from _NVivo_ and put them into ***C:/insect_study/matrices/**. You also have a field notes spreadsheet, located at **C:/insect_study/records/refinements.xlsx**. So your file structure looks like this: 
+Imagine that you are interested in public perceptions of insects. You've interviewed 15 people, you've made a few refinements, and you want to see how things are going. You have exported coding matrices for the 15 interviews from _NVivo_ and put them into **C:/insect_study/matrices/**. You also have a field notes spreadsheet, located at **C:/insect_study/records/refinements.xlsx**. So your file structure looks like this: 
 
 ```
 C:/

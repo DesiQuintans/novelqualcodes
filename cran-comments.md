@@ -5,6 +5,14 @@
 * This is a new release.
 
 
+## Author comments 2023-09-06
+
+Thank you for notifying me about the LaTeX issue.
+
+1. I removed the right-arrow Unicode character that created the error.
+
+
+
 ## Author comments 2023-08-11
 
 Hope you had a good CRAN vacation! I have resubmitted with these changes:

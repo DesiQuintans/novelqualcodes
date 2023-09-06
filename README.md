@@ -2,7 +2,7 @@
 Interviews
 ================
 Kam Wong & Desi Quintans.
-August 17, 2023.
+September 06, 2023.
 
 - [Aim of this document](#aim-of-this-document)
 - [What is *novelqualcodes*?](#what-is-novelqualcodes)
@@ -159,9 +159,9 @@ produce spreadsheets in the correct format, which we detail below.
 
 ### Getting coding matrices from *NVivo*
 
-1.  In *NVivo*, click **Explore** → **Matrix Coding Query**. A new pane
-    will open with two large boxes: one labelled *Rows* and the other
-    labelled *Columns*.
+1.  In *NVivo*, click **Explore** then **Matrix Coding Query**. A new
+    pane will open with two large boxes: one labelled *Rows* and the
+    other labelled *Columns*.
 
 ![](vignettes/nvivo01.jpg)
 
@@ -219,9 +219,9 @@ Imagine that you are interested in public perceptions of insects. You’ve
 done 15 one-on-one interviews, you’ve made a few refinements, and you
 want to see how things are going. You have exported coding matrices for
 the 15 interviews from *NVivo* and put them into
-\***C:/insect_study/matrices/**. You also have a field notes
-spreadsheet, located at **C:/insect_study/records/refinements.xlsx**. So
-your file structure looks like this:
+**C:/insect_study/matrices/**. You also have a field notes spreadsheet,
+located at **C:/insect_study/records/refinements.xlsx**. So your file
+structure looks like this:
 
     C:/
     ----insect_study/
