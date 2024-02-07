@@ -1,8 +1,20 @@
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 notes
 
-* This is a new release.
+
+
+
+## Author comments 2024-02-08
+
+This minor release only updates the package's documentation and vignette.
+
+
+## Author comments 2023-09-11
+
+Thank you for notifying me about the LaTeX issue.
+
+1. I removed the right-arrow Unicode character from the function documentation.
 
 
 ## Author comments 2023-09-06

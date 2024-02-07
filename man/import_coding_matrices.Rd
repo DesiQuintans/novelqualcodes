@@ -8,7 +8,7 @@ import_coding_matrices(path, recursive = FALSE)
 }
 \arguments{
 \item{path}{(Character) Path to a folder that contains coding matrices
-exported from NVivo (\emph{Explore → Matrix Coding Query → Export Coding Matrix}). All
+exported from NVivo (\emph{Explore} then \emph{Matrix Coding Query} then \emph{Export Coding Matrix}). All
 files with \emph{.XLS} or \emph{.XLSX} extensions will be imported.}
 
 \item{recursive}{(Logical) If \code{TRUE}, also imports files inside subfolders of \code{path}.}

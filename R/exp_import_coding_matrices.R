@@ -13,7 +13,7 @@
 #' and only uses the filename itself (i.e. file path is ignored during sorting).
 #'
 #' @param path (Character) Path to a folder that contains coding matrices
-#'    exported from NVivo (_Explore → Matrix Coding Query → Export Coding Matrix_). All
+#'    exported from NVivo (_Explore_ then _Matrix Coding Query_ then _Export Coding Matrix_). All
 #'    files with _.XLS_ or _.XLSX_ extensions will be imported.
 #' @param recursive (Logical) If `TRUE`, also imports files inside subfolders of `path`.
 #'

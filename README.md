@@ -2,7 +2,7 @@
 Interviews
 ================
 Kam Wong & Desi Quintans.
-September 06, 2023.
+February 08, 2024.
 
 - [Aim of this document](#aim-of-this-document)
 - [What is *novelqualcodes*?](#what-is-novelqualcodes)
@@ -44,6 +44,8 @@ interviews over time.
 
 # What is *novelqualcodes*?
 
+[![](https://cranlogs.r-pkg.org/badges/novelqualcodes)](https://cran.r-project.org/package=novelqualcodes)
+
 *novelqualcodes* is a package aimed at qualitative researchers doing
 semi-structured interviews using the ‘framework’ method. Its main focus
 is to provide a transparent solution to reporting when refinements were
@@ -69,8 +71,14 @@ spreadsheet of field notes where you have recorded when refinements were
 made, what was done, and why it was done. Code trends and refinements
 are displayed together in publication-ready plots.
 
-The methodology behind this package is currently under review; this
-document will be updated when that paper is in press.
+You can read more about the methodology of this package in:
+
+> Wong, K. C., Trankle, S. A., Quintans, D., Nguyen, T. N., Usherwood,
+> T., & Chow, C. K. (2023). *A Systematic Approach to Improving the
+> Transparency of Interview Refinements and Data Sufficiency in
+> Semi-Structured Interviews: An Illustration Using the Mass Atrial
+> Fibrillation Screening Study.* International Journal of Qualitative
+> Methods, 22. <https://doi.org/10.1177/16094069231220773>
 
 # Installing *novelqualcodes*
 

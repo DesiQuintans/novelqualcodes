@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+
 # Aim of this document
 
 This document (briefly) demonstrates how to use the _novelqualcodes_ package to visualise the novelty and richness of semi-structured interviews over time.
@@ -23,6 +24,8 @@ This document (briefly) demonstrates how to use the _novelqualcodes_ package to 
 --------------------------------------------------------------------------------
 
 # What is _novelqualcodes_?
+
+[![](https://cranlogs.r-pkg.org/badges/novelqualcodes)](https://cran.r-project.org/package=novelqualcodes)
 
 _novelqualcodes_ is a package aimed at qualitative researchers doing semi-structured interviews using the 'framework' method. Its main focus is to provide a transparent solution to reporting when refinements were made to questions during the interview process, and how that informs the researchers' decision to stop interviews (the _stopping point_). Its secondary focus is to allow researchers to visualise the novelty and richness of interviews as they are coded so that it can be part of the decision-making process regarding the stopping point.
 
@@ -33,7 +36,9 @@ _novelqualcodes_ does this by importing 'coding matrices' that are exported from
 
 _novelqualcodes_ gets information about refinements by importing a spreadsheet of field notes where you have recorded when refinements were made, what was done, and why it was done. Code trends and refinements are displayed together in publication-ready plots.
 
-The methodology behind this package is currently under review; this document will be updated when that paper is in press.
+You can read more about the methodology of this package in:
+
+> Wong, K. C., Trankle, S. A., Quintans, D., Nguyen, T. N., Usherwood, T., & Chow, C. K. (2023). *A Systematic Approach to Improving the Transparency of Interview Refinements and Data Sufficiency in Semi-Structured Interviews: An Illustration Using the Mass Atrial Fibrillation Screening Study.* International Journal of Qualitative Methods, 22. <https://doi.org/10.1177/16094069231220773>
 
 
 

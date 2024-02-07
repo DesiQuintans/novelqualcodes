@@ -30,12 +30,14 @@ _novelqualcodes_ is a package aimed at qualitative researchers doing semi-struct
 
 _novelqualcodes_ does this by importing 'coding matrices' that are exported from _NVivo_'s **Matrix Coding Query** tool and tracking the trends of _novel_ and _duplicate_ codes across interviews. Briefly:
 
-- A **novel code** is a topic/idea/concept that has not been mentioned in an interview before. For example, a novel code is a topic that was mentioned by Interviewee 17, but which was not mentioned by Interviewees 1 through 16.
-- A **duplicate code** is one that has been talked about by other interviewees previously.
+- A **novel code** is a topic/idea/concept that has not been mentioned in an interview before. For example, a novel code is a topic that was mentioned in Interview 17, but which was not mentioned in Interviews 1 through 16.
+- A **duplicate code** is one that has been talked about in other interviews previously.
 
 _novelqualcodes_ gets information about refinements by importing a spreadsheet of field notes where you have recorded when refinements were made, what was done, and why it was done. Code trends and refinements are displayed together in publication-ready plots.
 
-The methodology behind this package is currently under review; this document will be updated when that paper is in press.
+You can read more about the methodology of this package in:
+
+> Wong, K. C., Trankle, S. A., Quintans, D., Nguyen, T. N., Usherwood, T., & Chow, C. K. (2023). *A Systematic Approach to Improving the Transparency of Interview Refinements and Data Sufficiency in Semi-Structured Interviews: An Illustration Using the Mass Atrial Fibrillation Screening Study.* International Journal of Qualitative Methods, 22. <https://doi.org/10.1177/16094069231220773>
 
 
 
