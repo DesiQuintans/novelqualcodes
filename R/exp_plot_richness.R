@@ -96,6 +96,8 @@ plot_richness <- function(score_df, refinements = integer(0),
         ggpattern::scale_pattern_fill_manual(values = c(Duplicate = col$stroke_duplicate, Novel = col$stroke_novel)) +
         ggplot2::scale_fill_manual(values = c(Duplicate = col$fill_duplicate,   Novel = col$fill_novel)) +
         ggplot2::scale_colour_manual(values = c(Duplicate = col$stroke_duplicate, Novel = col$stroke_novel)) +
+        ggplot2::scale_x_continuous(breaks = function(x) round(unique(pretty(x)))) +
+        ggplot2::scale_y_continuous(breaks = function(x) round(unique(pretty(x)))) +
         ggplot2::theme(legend.position = "top") +
         ggplot2::ylab(y_label) +
         ggplot2::xlab("Interview order\n(Refinements indicated by \u2605)") +

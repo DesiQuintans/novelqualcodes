@@ -83,6 +83,7 @@ plot_novelty <- function(score_df, refinements = integer(0), col = list(stroke =
                             size = 2, shape = 21, colour = col$stroke) +
         ggplot2::scale_fill_manual(values = c(`TRUE`  = col$fill_ref,
                                               `FALSE` = col$fill)) +
+        ggplot2::scale_x_continuous(breaks = function(x) round(unique(pretty(x)))) +
         ggplot2::scale_y_continuous(breaks = function(x) round(unique(pretty(x)))) +
         ggplot2::theme(legend.position = "none") +
         ggplot2::ylab("Cumulative sum of novel interview codes") +

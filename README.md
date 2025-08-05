@@ -2,7 +2,7 @@
 Interviews
 ================
 Kam Wong & Desi Quintans.
-February 08, 2024.
+August 05, 2025.
 
 - [Aim of this document](#aim-of-this-document)
 - [What is *novelqualcodes*?](#what-is-novelqualcodes)
@@ -444,7 +444,7 @@ Refinements are marked with stars at each bar. Comparing this richness
 plot to the previous novelty plot, we see that each interview mentions a
 similar number of codes (3 or 4 on average) and that none of the
 interviews after refinements produced any novel codes. This means that
-our lack of novel codes is probably not caused by an unluckly string of
+our lack of novel codes is probably not caused by an unlucky string of
 low-richness interviews, and supports the idea that our refinements are
 not properly targeted.
 
