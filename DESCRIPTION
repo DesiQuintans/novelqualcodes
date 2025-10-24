@@ -25,7 +25,8 @@ Description: In semi-structured interviews that use the 'framework' method, it
     information. This package provides tools to visualise when refinements occur
     and how that affects the trends of novel and duplicate codes. These
     visualisations, when used progressively as new interviews are finished, can
-    help the researcher to decide on a stopping point for their interviews.
+    help the researcher to decide on a stopping point for their interviews. For
+    context, see Wong et al., (2023) <doi:10.1177/1609406923122077>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

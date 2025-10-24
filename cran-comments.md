@@ -1,8 +1,15 @@
 ## R CMD check results
 
+As of 2025-10-24: 
+
 0 errors | 0 warnings | 0 notes
 
 
+
+
+## Author comments 2025-10-24
+
+This minor release adds data quality checks for user input. I have also added the DOI for our journal article to the DESCRIPTION.
 
 
 ## Author comments 2024-02-08
