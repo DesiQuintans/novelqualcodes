@@ -36,8 +36,13 @@ import_field_notes <- function(path, ...) {
                                      col_names = TRUE,
                                      ...)
 
-    result <- list(ref_points = as.integer(unique(fieldnotes[[1]])),
+    result <- list(ref_points = suppressWarnings(as.integer(unique(fieldnotes[[1]]))),
                    df = fieldnotes)
+
+    stopifnot(
+        "The `interview_num` column in your field notes is not numeric.\n  Expecting a set of numbers describing which interviews had refinements, e.g. 1, 3, 6, 11..." =
+            all(is.na(result$ref_points)) == FALSE
+    )
 
     class(result) <- "field_notes"
 
