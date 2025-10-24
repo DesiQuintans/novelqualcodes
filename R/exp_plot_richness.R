@@ -51,6 +51,16 @@
 #' # Generate a plot using scored codes and a vector of refinement times
 #' plot_richness(score_df = my_scores, refinements = c(4, 8, 10))
 #'
+#' # Add colours!
+#' plot_richness(
+#'     score_df = my_scores,
+#'     refinements = c(4, 8, 10),
+#'     col = list(stroke_novel     = "lightblue",
+#'                stroke_duplicate = "green",
+#'                fill_novel       = "blue",
+#'                fill_duplicate   = "orange")
+#' )
+#'
 #' @md
 #' @importFrom ggplot2 .data
 plot_richness <- function(score_df, refinements = integer(0),
