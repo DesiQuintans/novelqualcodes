@@ -27,6 +27,10 @@ reshape_for_plots <- function(score_df, refinements = integer(0)) {
                              include.lowest = TRUE)
         )
 
+    # Omit groups that have a count of 0. This removes an issue where the
+    # "Novel" group was being drawn with a 2-pixel line at Interview #1,
+    # especially visible if the `stroke_duplicate` colour was a prominent one.
+    long_df <- long_df[long_df$n > 0, ]
+
     return(long_df)
 }
-
