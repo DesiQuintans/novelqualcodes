@@ -66,6 +66,16 @@ plot_novelty(score_df = my_scores, refinements = my_refinements)
 # Generate a plot using scored codes and a vector of refinement times
 plot_novelty(score_df = my_scores, refinements = c(4, 8, 10))
 
+# Add colours!
+
+plot_novelty(
+  score_df = my_scores,
+  refinements = c(4, 8, 10),
+  col = list(stroke    = "lightgreen",
+             fill_ref  = "red",
+             fill      = "blue")
+)
+
 }
 \seealso{
 \code{\link[=score_codes]{score_codes()}}, \code{\link[=import_field_notes]{import_field_notes()}}, \code{\link[=plot_richness]{plot_richness()}}, \code{\link[=save_last_plot]{save_last_plot()}}
