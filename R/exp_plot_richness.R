@@ -1,6 +1,7 @@
 
 #' Plot richness of interview codes over time
 #'
+#' @description
 #' The full definition of novel and duplicate codes is in [score_codes()].
 #' Briefly, 'novel' codes are topics/ideas/concepts that were not mentioned in
 #' previous interviews, whereas 'duplicate' codes are topics that other
