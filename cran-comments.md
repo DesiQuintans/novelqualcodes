@@ -1,10 +1,15 @@
 ## R CMD check results
 
-As of 2025-10-24: 
+As of 2025-10-30: 
 
 0 errors | 0 warnings | 0 notes
 
 
+
+
+## Author comments 2025-10-30
+
+I fixed the broken DOI (I was missing the last digit). Thank you!
 
 
 ## Author comments 2025-10-24

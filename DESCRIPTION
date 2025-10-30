@@ -1,7 +1,7 @@
 Package: novelqualcodes
 Type: Package
 Title: Visualise the Path to a Stopping Point in Qualitative Interviews Based on Novel Codes
-Version: 0.13.3
+Version: 0.13.4
 URL: https://github.com/DesiQuintans/novelqualcodes
 BugReports: https://github.com/DesiQuintans/novelqualcodes/issues
 Authors@R: c(
@@ -26,7 +26,7 @@ Description: In semi-structured interviews that use the 'framework' method, it
     and how that affects the trends of novel and duplicate codes. These
     visualisations, when used progressively as new interviews are finished, can
     help the researcher to decide on a stopping point for their interviews. For
-    context, see Wong et al., (2023) <doi:10.1177/1609406923122077>.
+    context, see Wong et al., (2023) <doi:10.1177/16094069231220773>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
