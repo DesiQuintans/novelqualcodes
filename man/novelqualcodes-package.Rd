@@ -6,7 +6,7 @@
 \alias{novelqualcodes-package}
 \title{novelqualcodes: Visualise the Path to a Stopping Point in Qualitative Interviews Based on Novel Codes}
 \description{
-In semi-structured interviews that use the 'framework' method, it is not always clear how refinements to interview questions affect the decision of when to stop interviews. The trend of 'novel' and 'duplicate' interview codes (novel codes are information that other interviewees have not previously mentioned) provides insight into the richness of qualitative information. This package provides tools to visualise when refinements occur and how that affects the trends of novel and duplicate codes. These visualisations, when used progressively as new interviews are finished, can help the researcher to decide on a stopping point for their interviews. For context, see Wong et al., (2023) \doi{10.1177/1609406923122077}.
+In semi-structured interviews that use the 'framework' method, it is not always clear how refinements to interview questions affect the decision of when to stop interviews. The trend of 'novel' and 'duplicate' interview codes (novel codes are information that other interviewees have not previously mentioned) provides insight into the richness of qualitative information. This package provides tools to visualise when refinements occur and how that affects the trends of novel and duplicate codes. These visualisations, when used progressively as new interviews are finished, can help the researcher to decide on a stopping point for their interviews. For context, see Wong et al., (2023) \doi{10.1177/16094069231220773}.
 }
 \seealso{
 Useful links:

@@ -9,6 +9,12 @@ As of 2025-10-30:
 
 ## Author comments 2025-10-30
 
+I'm very sorry to waste your time, I forgot to rebuild the documentation before
+submission, so the DOI was still broken in the .Rd files. Sorry and thank you!
+
+
+## Author comments 2025-10-30
+
 I fixed the broken DOI (I was missing the last digit). Thank you!
 
 
