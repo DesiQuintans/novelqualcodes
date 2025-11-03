@@ -114,7 +114,7 @@ up-to-date version from GitHub:
 
 ``` r
 install.packages("remotes")
-remotes::install_github("DesiQuintans/novelqualcodes")
+remotes::install_github("DesiQuintans/novelqualcodes", build_vignettes = TRUE)
 ```
 
 You only need to install the package once; you don’t need to re-install
