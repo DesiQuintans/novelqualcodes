@@ -14,7 +14,9 @@ Authors@R: c(
            family  = "Quintans",
            email   = "science@desiquintans.com",
            role    = c("cre", "aut", "cph"),
-           comment = c(ORCID = "0000-0003-3356-0293"))
+           comment = c(ORCID = "0000-0003-3356-0293")),
+    person(given   = "Westmead Applied Research Centre",
+           role    = c("cph", "fnd"))
            )
 Maintainer: Desi Quintans <science@desiquintans.com>
 Description: In semi-structured interviews that use the 'framework' method, it
