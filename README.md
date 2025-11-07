@@ -2,7 +2,7 @@
 Interviews
 ================
 Kam Wong & Desi Quintans.
-August 05, 2025.
+November 04, 2025.
 
 - [Aim of this document](#aim-of-this-document)
 - [What is *novelqualcodes*?](#what-is-novelqualcodes)
@@ -114,7 +114,7 @@ up-to-date version from GitHub:
 
 ``` r
 install.packages("remotes")
-remotes::install_github("DesiQuintans/novelqualcodes")
+remotes::install_github("DesiQuintans/novelqualcodes", build_vignettes = TRUE)
 ```
 
 You only need to install the package once; you don’t need to re-install
